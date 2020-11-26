@@ -1,0 +1,97 @@
+.btn {
+  margin: 50px 20px 0px 20px;
+  font-size: 2rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/* Landing Section */
+
+#landingimgdiv {
+  max-height: 810px;
+  max-width: 1920px;
+  overflow: hidden;
+  background-image: url("../images/board.jpg");
+  background-color: red;
+  height: 810px;
+}
+
+#landingbrand {
+  max-width: 200px;
+}
+
+#landingimgtext {
+  text-align: center;
+  padding: 100px 0px;
+}
+
+#landingimgtext h1 {
+  font-size: 5rem;
+}
+
+#landingimgtext h3 {
+  font-size: 2.5rem;
+}
+
+/* Quiz Section */
+
+#landingquizimgdiv {
+  max-height: 936px;
+  max-width: 1920px;
+  overflow: hidden;
+  background-image: url("../images/spices.jpg");
+  background-position: bottom;
+  background-color: red;
+  height: 936px;
+}
+
+/* Meal Planner Section */
+
+#landingplannerimgdiv {
+  max-height: 936px;
+  max-width: 1920px;
+  overflow: hidden;
+  background-image: url("../images/planner.jpg");
+  background-color: red;
+  height: 936px;
+}
+
+/* Fridge Raider Section */
+
+#landingfridgeimgdiv {
+  max-height: 936px;
+  max-width: 1920px;
+  overflow: hidden;
+  background-image: url("../images/fridge.jpg");
+  background-color: red;
+  height: 936px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Media Responsiveness */
+
+@media only screen and (max-width: 1000px) {
+  #landingimgdiv {
+    height: 810px;
+  }
+
+  #landingimgtext {
+    text-align: center;
+    padding: 20px 0px;
+  }
+
+  #landingimgtext h1 {
+    font-size: 3rem;
+  }
+
+  #landingimgtext h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+}

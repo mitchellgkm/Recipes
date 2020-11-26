@@ -15,14 +15,19 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div class="container-fluid">
       <section id="navbarsection">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="index.html"
-            ><img src="toasta.png" width="100" height="100" alt="toasta logo"
+            ><img
+              src="images/toasta.png"
+              width="100"
+              height="100"
+              alt="toasta logo"
           /></a>
           <button
             class="navbar-toggler ml-auto"
@@ -37,28 +42,88 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"
-                  >Home <span class="sr-only">(current)</span></a
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black">MEAL QUIZ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black"
+                  >MEAL PLANNER</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#" style="color: black"
+                  >FRIDGE RAIDER</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" href="#" style="color: black">RECIPES</a>
               </li>
             </ul>
           </div>
         </nav>
       </section>
+
+      <section id="landingtop">
+        <div id="landingimgdiv">
+          <div id="landingimgtext">
+            <img id="landingbrand" src="images/toast-trans.png" />
+            <h1>Welcome to <span class="brand">Toasta</span></h1>
+            <hr />
+            <h3>Where we make meal decisions as easy as 1, 2, 3...</h3>
+            <hr />
+            <div id="landingbuttons">
+              <button
+                id="quizbutton"
+                class="btn btn-primary"
+                onClick="document.getElementById('landingquiz').scrollIntoView();"
+              >
+                What should I eat today?
+              </button>
+              <button
+                id="plannerbutton"
+                class="btn btn-success"
+                onClick="document.getElementById('landingplanner').scrollIntoView();"
+              >
+                What should I eat this week?
+              </button>
+              <button
+                id="makebutton"
+                class="btn btn-danger"
+                onClick="document.getElementById('landingfridge').scrollIntoView();"
+              >
+                What can I make right now?
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="landingquiz">
+        <div id="landingquizimgdiv">
+          <div id="landingquizimgtext"></div>
+        </div>
+      </section>
+
+      <section id="landingplanner">
+        <div id="landingplannerimgdiv">
+          <div id="landingplannerimgtext"></div>
+        </div>
+      </section>
+
+      <section id="landingfridge">
+        <div id="landingfridgeimgdiv">
+          <div id="landingfridgeimgtext"></div>
+          <div id="returntotop">
+            <a href="#navbarsection" style="color: black; font-weight: bold"
+              >Return to top</a
+            >
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- Optional JavaScript -->
-    <script src="script.js"></script>
+    <script src="javascript/script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
