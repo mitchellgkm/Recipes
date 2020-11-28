@@ -43,6 +43,9 @@
   background-position: bottom;
   background-color: red;
   height: 936px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
 }
 
 /* Meal Planner Section */
@@ -54,6 +57,9 @@
   background-image: url("../images/planner.jpg");
   background-color: red;
   height: 936px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
 }
 
 /* Fridge Raider Section */
@@ -68,6 +74,25 @@
   position: relative;
   text-align: center;
   justify-content: center;
+}
+
+/* Page Traversal */
+
+.returntotop {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 3px;
+  left: 44%;
+  right: 44%;
+  text-align: center;
+  margin: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.returntotop a:hover {
+  text-decoration: none;
 }
 
 /* Media Responsiveness */
@@ -93,5 +118,11 @@
   .btn {
     font-size: 1rem;
     margin-top: 5px;
+  }
+
+  .returntotop {
+    font-size: 1rem;
+    left: 35%;
+    right: 35%;
   }
 }
