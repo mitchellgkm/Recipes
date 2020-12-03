@@ -1,3 +1,17 @@
+var searchbar = document.getElementById("recipesearch");
+
+searchbar.addEventListener("keydown", (event) => {
+  if (event.keyCode === 13) {
+    callEndpoint();
+  }
+});
+
+searchbutton.addEventListener("click", (event) => {
+  if (searchbar.value != "") {
+    callEndpoint();
+  }
+});
+
 var cards = document.getElementsByClassName("card");
 
 for (i = 0; i < cards.length; i++) {
@@ -5,12 +19,11 @@ for (i = 0; i < cards.length; i++) {
 }
 
 var cardImages = document.getElementsByClassName("card-img");
-var cardTitles = document.getElementsByClassName("card-title");
 var cardLinks = document.getElementsByClassName("card-link");
 var cardTexts = document.getElementsByClassName("card-text");
 
 function callEndpoint() {
-  var searchInput = document.getElementById("recipesearch").value;
+  var searchInput = searchbar.value;
 
   const endpoint = "https://api.spoonacular.com/recipes/complexSearch";
   const search = searchInput;
