@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/recipes.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -67,77 +67,153 @@
         </nav>
       </section>
 
-      <section id="landingtop">
-        <div id="landingimgdiv">
-          <div id="landingimgtext">
-            <img id="landingbrand" src="images/toast-trans.png" />
-            <h1>Welcome to <span class="brand">Toasta</span></h1>
-            <hr />
-            <h3>Where we make meal decisions as easy as 1, 2, 3...</h3>
-            <hr />
-            <div id="landingbuttons">
-              <button
-                id="quizbutton"
-                class="btn btn-primary"
-                onClick="document.getElementById('landingquiz').scrollIntoView();"
-              >
-                What should I eat today?
-              </button>
-              <button
-                id="plannerbutton"
-                class="btn btn-success"
-                onClick="document.getElementById('landingplanner').scrollIntoView();"
-              >
-                What should I eat this week?
-              </button>
-              <button
-                id="makebutton"
-                class="btn btn-danger"
-                onClick="document.getElementById('landingfridge').scrollIntoView();"
-              >
-                What can I make right now?
-              </button>
+      <div id="searchbar">
+        <input
+          type="search"
+          name="recipesearch"
+          id="recipesearch"
+          placeholder="Search Recipes..."
+        />
+        <button
+          class="btn btn-primary"
+          style="background-color: orangered; border: 1px solid orangered"
+          onclick="makeSearch()"
+        >
+          Search
+        </button>
+      </div>
+
+      <div id="searchresults">
+        <div class="row" id="resultsrow1">
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  class="card-img"
+                  src="https://spoonacular.com/recipeImages/654959-312x231.jpg"
+                />
+                <h3 class="card-title">
+                  <a
+                    href="http://www.foodista.com/recipe/K6QWSKQM/pasta-with-tuna"
+                    >Pasta With Tuna</a
+                  >
+                </h3>
+                <p class="card-text">
+                  Pasta With Tuna might be just the main course you are
+                  searching for. One serving contains <b>421 calories</b>,
+                  <b>24g of protein</b>, and <b>10g of fat</b>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section id="landingquiz">
-        <div id="landingquizimgdiv">
-          <div id="landingquizimgtext"></div>
-          <div class="returntotop">
-            <a href="#navbarsection" style="color: black; font-weight: bold"
-              >Return to top</a
-            >
+        <div class="row" id="resultsrow2">
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="images/toasta.png" />
+                <h3 class="card-title">Title</h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      <section id="landingplanner">
-        <div id="landingplannerimgdiv">
-          <div id="landingplannerimgtext"></div>
-          <div class="returntotop">
-            <a href="#navbarsection" style="color: black; font-weight: bold"
-              >Return to top</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section id="landingfridge">
-        <div id="landingfridgeimgdiv">
-          <div id="landingfridgeimgtext"></div>
-          <div class="returntotop">
-            <a href="#navbarsection" style="color: black; font-weight: bold"
-              >Return to top</a
-            >
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
-    <script src="javascript/script.js"></script>
+    <script src="javascript/recipes.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
