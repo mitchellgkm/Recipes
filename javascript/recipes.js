@@ -1,29 +1,56 @@
-var searchbar = document.getElementById("recipesearch");
+let searchBar = document.getElementById("recipesearch");
+let searchButton = document.getElementById("searchbutton");
 
-searchbar.addEventListener("keydown", (event) => {
+var offsetValue = 0;
+
+searchBar.addEventListener("keydown", (event) => {
   if (event.keyCode === 13) {
-    callEndpoint();
+    offsetValue = 0;
+    callEndpoint(offsetValue);
   }
 });
 
-searchbutton.addEventListener("click", (event) => {
-  if (searchbar.value != "") {
-    callEndpoint();
+searchButton.addEventListener("click", (event) => {
+  if (searchBar.value != "") {
+    offsetValue = 0;
+    callEndpoint(offsetValue);
   }
 });
 
-var cards = document.getElementsByClassName("card");
+let searchArrowsDiv = document.getElementById("searcharrows");
+let leftSearchArrow = document.getElementById("leftSearchArrow");
+let rightSearchArrow = document.getElementById("rightSearchArrow");
+
+leftSearchArrow.addEventListener("click", () => {
+  if (searchBar.value != "") {
+    offsetValue -= 10;
+    callEndpoint(offsetValue);
+  }
+});
+
+rightSearchArrow.addEventListener("click", () => {
+  if (searchBar.value != "") {
+    offsetValue += 10;
+    callEndpoint(offsetValue);
+  }
+});
+
+searchArrowsDiv.style.visibility = "hidden";
+
+let cards = document.getElementsByClassName("card");
 
 for (i = 0; i < cards.length; i++) {
   cards[i].style.visibility = "hidden";
 }
 
-var cardImages = document.getElementsByClassName("card-img");
-var cardLinks = document.getElementsByClassName("card-link");
-var cardTexts = document.getElementsByClassName("card-text");
+let cardImages = document.getElementsByClassName("card-img");
+let cardLinks = document.getElementsByClassName("card-link");
+let cardTexts = document.getElementsByClassName("card-text");
 
-function callEndpoint() {
-  var searchInput = searchbar.value;
+function callEndpoint(offset) {
+  searchArrowsDiv.style.visibility = "visible";
+
+  let searchInput = searchBar.value;
 
   const endpoint = "https://api.spoonacular.com/recipes/complexSearch";
   const search = searchInput;
@@ -34,13 +61,14 @@ function callEndpoint() {
     search +
     "&apiKey=" +
     key +
-    "&addRecipeInformation=true";
+    "&addRecipeInformation=true" +
+    `&offset=${offset}`;
 
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
       var results = data.results;
-      console.log(results[0]["title"]);
+      console.log(results);
 
       var maxLength = Math.min(cards.length, results.length);
 
